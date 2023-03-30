@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bro2">
+      <form class="form" action="/submit-form" method  = "POST">
+        
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <label ><b>ID:</b></label>
+                    <input type="text" /></div>
+                
+                <div class="col-3"><label><b>Date</b></label>
+                   
+                    <input type="date" name = "date" required/></div>
+                <div class="col"><label htmlFor=""><b>Place</b></label>
+                    <input type="text" name="place" /></div>
+            </div>
+          
+          <br />
+          <label htmlFor=""><b>Name</b></label>
+          <br />
+          <input type="text" name="name"/>
+          <br />
+          <br>
+          <label ><b>Gender</b></label>
+          <br />
+          <div class="row">
+            <div class="col-2"><input type="radio" id="gender1" name="gender" value="Male" />
+                <label for="gender1">Male</label></div>
+            <div class="col-2"><input type="radio" id="gender2" name="gender" value="Female" />
+                <label for="gender2">Female</label></div>
+            <div class="col-2"><input type="radio" id="gender3" name="gender" value="Other" />
+                <label for="gender3">Others</label></div>
+        </div>
+          <br></br>
+          <label name = "complaint"><b>Chief Complaint</b></label>
+          <br />
+          <textarea rows="1" cols="40" name="complaint" form="usrform"></textarea>
+          <br />
+          <br>
+          <label ><b>Past Medical History</b></label>
+          <br />
+          <!-- <select id="history1" name="history">
+            <option value="Diabetes">Diabetes</option>
+            <option value="Hypertention">Hypertention</option>
+            <option value="Thyroid">Thyroid disorders</option>
+            <option value="Cardiovascular">Cardiovascular diseases</option>
+            <option value="Respiratory">Respiratory diseases</option>
+            <option value="Bleeding">Bleeding disorders</option>
+            <option value="Others">Others</option>
+          </select>
+          <br /> -->
+          <br>
+          <label htmlFor="">Diabetes</label>
+          <br />
+          <input type="radio" id="visit1" name="Diabetes" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Diabetes" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">HyperTension</label>
+          <br />
+          <input type="radio" id="visit1" name="HyperTension" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="HyperTension" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Thyroid disorders</label>
+          <br />
+          <input type="radio" id="visit1" name="Thyroid" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Thyroid" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+          
+          <br>
+          <label htmlFor="">Cardiovascular diseases</label>
+          <br />
+          <input type="radio" id="visit1" name="Cardiovascular" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Cardiovascular" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Respiratory diseases</label>
+          <br />
+          <input type="radio" id="visit1" name="Respiratory" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Respiratory" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Bleeding disorders</label>
+          <br />
+          <input type="radio" id="visit1" name="Bleeding" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Bleeding" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+
+          <br>
+          <label htmlFor=""><b>Past Dental Visit</b></label>
+          <br />
+          <input type="radio" id="visit1" name="visit" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="visit" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label><b>Personal Habits</b></label>
+          <br />
+          <br>
+          <label htmlFor="">Smoking</label>
+          <br />
+          <input type="radio" id="visit1" name="Smoking" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Smoking" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Alcohol</label>
+          <br />
+          <input type="radio" id="visit1" name="Alcohol" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Alcohol" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Nothing</label>
+          <br />
+          <input type="radio" id="visit1" name="Nothing" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Nothing" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <!-- <div class="row">
+            <div class="col-2"><input type="radio" id="gender1" name="habits" value="Smoking" />
+                <label for="smoking">Smoking</label></div>
+            <div class="col-2"><input type="radio" id="gender2" name="habits" value="Alcohol" />
+                <label for="alcohol">Alcohol</label></div>
+            <div class="col-2"><input type="radio" id="gender3" name="habits" value="None" />
+                <label for="Nothing">Nothing</label></div>
+        </div> -->
+          <!-- <input type="checkbox" id="smoking" name="habits" value="smoking" />
+          <label for="vehicle1"> Smoking</label>
+          <br />
+          <input
+            type="checkbox"
+            id="smokeless"
+            class = "modi"
+            name="habits"
+            value="smokeless"
+          />
+          <label for="vehicle2"> Smoke-less</label>
+          <br />
+          <input type="checkbox" class = "modi" id="alcohol" name="habits" value="alcohol" />
+          <label > Alcohol</label>-->
+          <br></br>
+
+          <div class="row">
+
+            <div class="row">
+                <div class="col-2"><label><b>Tooth number:</b></label></div>
+                <div class="col"><input type="text"name = "toothnumber"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Decayed:</b></label></div>
+                <div class="col"><input type="text" name="decayed" /></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Missing:</b></label></div>
+                <div class="col"><input type="text" name="missing"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Filled:</b></label></div>
+                <div class="col"><input type="text" name = "filled"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Pain:</b></label></div>
+                <div class="col"><input type="text" name="pain"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Fracture:</b></label></div>
+                <div class="col"><input type="text" name="fractured"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+                <div class="col-2"><label htmlFor=""><b>Mobility:</b></label></div>
+                <div class="col"><input type="text" name="mobility"/></div>
+            </div>
+            <br>
+            <br/>
+            <div class="row">
+              <div class="col-2"><label htmlFor=""><b>Others:</b></label></div>
+              <div class="col"><input type="text" name="Others"/></div>
+          </div>
+            
+
+
+          </div>
+          
+          <!-- <label htmlFor="">Others:</label>
+          <br />
+          <textarea rows="4" cols="50" form="usrform" name="others"></textarea> -->
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-2"><label htmlFor=""><b>Gingiva</b></label></div>
+            <!-- <div class="col"><select id="history" name="gingiva">
+                <option value="Calculus">Calculus:</option>
+                <option value="Stains">Stains:</option>
+                <option value="Generalized chronic gingivitis">Generalized chronic gingivitis:</option>
+                <option value="periodontitis">
+                  Generalized chronic periodontitis:
+                </option>
+                <option value="others">Others:</option>
+              </select></div> -->
+          </div>
+
+          <br>
+          <label htmlFor="">Calculus:</label>
+          <br />
+          <input type="radio" id="visit1" name="Calculus" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Calculus" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Stains:</label>
+          <br />
+          <input type="radio" id="visit1" name="Stains" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="Stains" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Generalized chronic gingivitis:</label>
+          <br />
+          <input type="radio" id="visit1" name="gingivitis" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="gingivitis" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+
+          <br>
+          <label htmlFor="">Generalized chronic periodontitis:</label>
+          <br />
+          <input type="radio" id="visit1" name="periodontitis" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="periodontitis" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+        
+
+
+          <!-- <br />
+          <label htmlFor="">Description</label>
+          <br />
+          <textarea rows="4" cols="50" name="comment" form="usrform" ></textarea>
+          <br /> -->
+          <br>
+          <label htmlFor=""><b>Dental Fluorosis</b></label>
+          <br />
+          <input type="radio" id="visit1" name="floro" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="floro" value="NO" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label htmlFor=""><b>Malocclusion</b></label>
+          <br />
+          <input type="radio" id="visit1" name="malo" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="malo" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <label htmlFor=""><b>Oral mucosal lesion</b></label>
+          <br />
+          <input type="radio" id="visit1" name="masc" value="Yes" />
+          <label for="visit1">Yes</label>
+          <br />
+          <input type="radio" id="visit2" name="masc" value="No" />
+          <label for="visit2">No</label>
+          <br />
+          <br>
+          <div class="row">
+            <div class="col-2"><label><b>Doctor's Name :</b></label></div>
+            <div class="col"><input type="text"name = "doctors_name"/></div>
+        </div>
+        <br />
+        <br />
+          <label htmlFor=""><b>Treatment done</b></label>
+          <br />
+          <select id="history" name="treatment">
+            <option value="Diabetes">Medication:</option>
+            <option value="Hypertention">Referral:</option>
+            <option value="Thyroid">Scaling:</option>
+            <option value="Cardiovascular">Extraction:</option>
+            <option value="Respiratory">Filling:</option>
+          </select>
+          <br />
+          <br>
+          <textarea rows="1" cols="50" name="explanation" form="usrform" ></textarea>
+          <br />
+          <br>
+          <br>
+          <!-- <input class="submit" type="submit" value="Submit"></input> -->
+          <button type="submit" style="width: 100%; color: rgb(249, 252, 251); background-color:  rgb(18, 103, 103);"> Submit </button>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
