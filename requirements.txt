@@ -1,2 +1,7 @@
 Flask
-gunicorn
+gunicorn==20.1.0
+Jinja2==3.0.3
+
+mypy-extensions==0.4.3
+mysql-connector-python==8.0.28
+mysqlclient==2.1.1
