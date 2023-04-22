@@ -36,12 +36,24 @@
           <label ><b>Gender</b></label>
           <br />
           <div class="row">
-            <div class="col-"><input type="radio" id="gender1" name="gender" value="Male" />
-                <label for="gender1">Male</label></div>
-            <div class="col-"><input type="radio" id="gender2" name="gender" value="Female" />
-                <label for="gender2">Female</label></div>
-            <div class="col-"><input type="radio" id="gender3" name="gender" value="Other" />
-                <label for="gender3">Others</label></div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender1" name="gender" value="Male" />
+                    <label class="form-check-label" for="gender1">Male</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender2" name="gender" value="Female" />
+                    <label class="form-check-label" for="gender2">Female</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="gender3" name="gender" value="Other" />
+                    <label class="form-check-label" for="gender3">Others</label>
+                </div>
+            </div>
         </div>
           <br></br>
           <label name = "complaint"><b>Chief Complaint</b></label>
@@ -51,7 +63,7 @@
           <br>
           <label ><b>Past Medical History</b></label>
           <br />
-          <br>
+          <!-- <br>
           <label htmlFor="">Diabetes</label>
           <br />
           <input type="radio" id="visit1" name="Diabetes" value="Yes" />
@@ -59,9 +71,22 @@
           <br />
           <input type="radio" id="visit2" name="Diabetes" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <br><br/>
+          <div class="form-group">
+            <label for="diabetes">Diabetes</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Diabetes" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Diabetes" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+
+          <!-- <br>
           <label htmlFor="">HyperTension</label>
           <br />
           <input type="radio" id="visit1" name="HyperTension" value="Yes" />
@@ -69,9 +94,22 @@
           <br />
           <input type="radio" id="visit2" name="HyperTension" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="hyperTension">HyperTension</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="HyperTension" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="HyperTension" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+          <!-- <br>
           <label htmlFor="">Thyroid disorders</label>
           <br />
           <input type="radio" id="visit1" name="Thyroid" value="Yes" />
@@ -79,9 +117,22 @@
           <br />
           <input type="radio" id="visit2" name="Thyroid" value="NO" />
           <label for="visit2">No</label>
-          <br />
+          <br /> -->
+
+          <div class="form-group">
+            <label for="thyroid">Thyroid disorders</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Thyroid" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Thyroid" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           
           <br>
+          <!-- <br>
           <label htmlFor="">Cardiovascular diseases</label>
           <br />
           <input type="radio" id="visit1" name="Cardiovascular" value="Yes" />
@@ -89,9 +140,22 @@
           <br />
           <input type="radio" id="visit2" name="Cardiovascular" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="cardiovascular">Cardiovascular diseases</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Cardiovascular" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Cardiovascular" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+          <!-- <br>
           <label htmlFor="">Respiratory diseases</label>
           <br />
           <input type="radio" id="visit1" name="Respiratory" value="Yes" />
@@ -99,9 +163,22 @@
           <br />
           <input type="radio" id="visit2" name="Respiratory" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="respiratory">Respiratory diseases</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Respiratory" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Respiratory" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+          <!-- <br>
           <label htmlFor="">Bleeding disorders</label>
           <br />
           <input type="radio" id="visit1" name="Bleeding" value="Yes" />
@@ -109,10 +186,23 @@
           <br />
           <input type="radio" id="visit2" name="Bleeding" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
-
+          <br /> -->
+          <div class="form-group">
+            <label for="bleeding">Bleeding disorders</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Bleeding" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Bleeding" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+
+          <!-- <br>
           <label htmlFor=""><b>Past Dental Visit</b></label>
           <br />
           <input type="radio" id="visit1" name="visit" value="Yes" />
@@ -120,8 +210,23 @@
           <br />
           <input type="radio" id="visit2" name="visit" value="No" />
           <label for="visit2">No</label>
-          <br />
+          <br /> -->
+          <div class="form-group">
+            <label for="visit"><b>Past Dental Visit</b></label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="visit" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="visit" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+          
+
+          <!-- <br>
           <label><b>Personal Habits</b></label>
           <br />
           <br>
@@ -152,8 +257,44 @@
           <br />
           <input type="radio" id="visit2" name="Nothing" value="NO" />
           <label for="visit2">No</label>
-          <br />
-          <br></br>
+          <br /> -->
+          <div class="form-group">
+            <label for="smoking"><b>Personal Habits</b></label>
+            <br>
+            <br>
+            <label for="smoking">Smoking</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="smoking-yes" name="Smoking" value="Yes" />
+              <label class="form-check-label" for="smoking-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="smoking-no" name="Smoking" value="No" />
+              <label class="form-check-label" for="smoking-no">No</label>
+            </div>
+            <br>
+            <label for="alcohol">Alcohol</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="alcohol-yes" name="Alcohol" value="Yes" />
+              <label class="form-check-label" for="alcohol-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="alcohol-no" name="Alcohol" value="No" />
+              <label class="form-check-label" for="alcohol-no">No</label>
+            </div>
+            <br>
+            <label for="nothing">None</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-yes" name="Nothing" value="Yes" />
+              <label class="form-check-label" for="nothing-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-no" name="Nothing" value="No" />
+              <label class="form-check-label" for="nothing-no">No</label>
+            </div>
+          </div>
+          
+          <br>
+          <br>
 
           <div class="row">
 
@@ -212,8 +353,9 @@
           <div class="row">
             <div class="col-2"><label htmlFor=""><b>Gingiva</b></label></div>
           </div>
-
           <br>
+
+          <!-- <br>
           <label htmlFor="">Calculus:</label>
           <br />
           <input type="radio" id="visit1" name="Calculus" value="Yes" />
@@ -221,9 +363,22 @@
           <br />
           <input type="radio" id="visit2" name="Calculus" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="calculus">Calculus:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusYes" value="Yes">
+              <label class="form-check-label" for="calculusYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusNo" value="No">
+              <label class="form-check-label" for="calculusNo">No</label>
+            </div>
+          </div>
           <br>
+        
+          
+          <!-- <br>
           <label htmlFor="">Stains:</label>
           <br />
           <input type="radio" id="visit1" name="Stains" value="Yes" />
@@ -231,9 +386,22 @@
           <br />
           <input type="radio" id="visit2" name="Stains" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="stains">Stains:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="stainsYes" name="Stains" value="Yes">
+              <label class="form-check-label" for="stainsYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="stainsNo" name="Stains" value="No">
+              <label class="form-check-label" for="stainsNo">No</label>
+            </div>
+          </div>
           <br>
+          
+
+          <!-- <br>
           <label htmlFor="">Generalized chronic gingivitis:</label>
           <br />
           <input type="radio" id="visit1" name="gingivitis" value="Yes" />
@@ -241,9 +409,22 @@
           <br />
           <input type="radio" id="visit2" name="gingivitis" value="NO" />
           <label for="visit2">No</label>
-          <br />
-
+          <br /> -->
+          <div class="form-group">
+            <label for="gingivitis">Generalized chronic gingivitis:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Yes">
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="No">
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+          <!-- <br>
           <label htmlFor="">Generalized chronic periodontitis:</label>
           <br />
           <input type="radio" id="visit1" name="periodontitis" value="Yes" />
@@ -251,9 +432,22 @@
           <br />
           <input type="radio" id="visit2" name="periodontitis" value="NO" />
           <label for="visit2">No</label>
-          <br />
-        
+          <br /> -->
+          <div class="form-group">
+            <label for="periodontitis">Generalized chronic periodontitis:</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Yes" />
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="No" />
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+        
+          <!-- <br>
           <label htmlFor=""><b>Dental Fluorosis</b></label>
           <br />
           <input type="radio" id="visit1" name="floro" value="Yes" />
@@ -261,8 +455,23 @@
           <br />
           <input type="radio" id="visit2" name="floro" value="NO" />
           <label for="visit2">No</label>
-          <br />
+          <br /> -->
+          <div class="form-group">
+            <label for="dentalFluorosis"><b>Dental Fluorosis</b></label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="floro" value="Yes">
+              <label class="form-check-label" for="visit1">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="floro" value="No">
+              <label class="form-check-label" for="visit2">No</label>
+            </div>
+          </div>
           <br>
+          
+
+
+          <!-- <br>
           <label htmlFor=""><b>Malocclusion</b></label>
           <br />
           <input type="radio" id="visit1" name="malo" value="Yes" />
@@ -270,8 +479,23 @@
           <br />
           <input type="radio" id="visit2" name="malo" value="No" />
           <label for="visit2">No</label>
-          <br />
+          <br /> -->
+          <div class="form-group">
+            <label for="malo"><b>Malocclusion</b></label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="malo" id="maloYes" value="Yes">
+              <label class="form-check-label" for="maloYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="malo" id="maloNo" value="No">
+              <label class="form-check-label" for="maloNo">No</label>
+            </div>
+          </div>
           <br>
+          
+
+
+          <!-- <br>
           <label htmlFor=""><b>Oral mucosal lesion</b></label>
           <br />
           <input type="radio" id="visit1" name="masc" value="Yes" />
@@ -279,7 +503,22 @@
           <br />
           <input type="radio" id="visit2" name="masc" value="No" />
           <label for="visit2">No</label>
-          <br />
+          <br /> -->
+          <div class="form-group">
+            <label for="oralMucosalLesion"><b>Oral mucosal lesion</b></label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionYes" value="Yes">
+              <label class="form-check-label" for="oralMucosalLesionYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionNo" value="No">
+              <label class="form-check-label" for="oralMucosalLesionNo">No</label>
+            </div>
+          </div>
+          <br>
+          
+
+
           <br>
           <div class="row">
             <div class="col-2"><label><b>Doctor's Name :</b></label></div>
