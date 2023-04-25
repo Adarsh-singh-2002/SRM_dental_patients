@@ -15,22 +15,49 @@
         
         
         <div class="container">
+             
+          <div class="row">
+            <div class="col-sm-2">
+              <label for="organiser" ><b>Organised By:</b></label>
+            </div>
+            <div class="col-sm-3">
+              <input type="text" id="organiser" name="organiser" class="form-control" required/>
+            </div>
+          </div>
+            <br>
             <div class="row">
-                <div class="col-3">
-                    <label ><b>ID:</b></label>
-                    <input type="text" /></div>
                 
                 <div class="col-3"><label><b>Date</b></label>
                    
-                    <input type="date" name = "date" required/></div>
+                    <input type="date" name = "date" required/>
+                </div>
+
                 <div class="col"><label htmlFor=""><b>Place</b></label>
-                    <input type="text" name="place" /></div>
-            </div>
+                    <input type="text" name="place" required />
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <!-- <div class="col-3">
+                    <label ><b>ID:</b></label>
+                    <input type="text" /></div> -->
+                
+                <div class="col-3"><label><b>Age</b></label>
+                   
+                    <input type="string" name = "age" required/>
+                </div>
+
+                <div class="col"><label htmlFor=""><b>Contact:</b></label>
+                  <input type="text" name="contact" required/>
+                </div>
+              </div>
+              <br>
           
           <br />
           <label htmlFor=""><b>Name</b></label>
           <br />
-          <input type="text" name="name"/>
+          <input type="text" name="name" required/>
           <br />
           <br>
           <label ><b>Gender</b></label>
@@ -38,19 +65,19 @@
           <div class="row">
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="gender1" name="gender" value="Male" />
+                    <input class="form-check-input" type="radio" id="gender1" name="gender" value="Male" required />
                     <label class="form-check-label" for="gender1">Male</label>
                 </div>
             </div>
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="gender2" name="gender" value="Female" />
+                    <input class="form-check-input" type="radio" id="gender2" name="gender" value="Female" required />
                     <label class="form-check-label" for="gender2">Female</label>
                 </div>
             </div>
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="gender3" name="gender" value="Other" />
+                    <input class="form-check-input" type="radio" id="gender3" name="gender" value="Other" required/>
                     <label class="form-check-label" for="gender3">Others</label>
                 </div>
             </div>
@@ -58,7 +85,7 @@
           <br></br>
           <label name = "complaint"><b>Chief Complaint</b></label>
           <br />
-          <textarea rows="1" cols="40" name="complaint" form="usrform"></textarea>
+          <textarea rows="1" cols="40" name="complaint" form="usrform" required></textarea>
           <br />
           <br>
           <label ><b>Past Medical History</b></label>
@@ -76,11 +103,11 @@
           <div class="form-group">
             <label for="diabetes">Diabetes</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Diabetes" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Diabetes" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Diabetes" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Diabetes" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -98,11 +125,11 @@
           <div class="form-group">
             <label for="hyperTension">HyperTension</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="HyperTension" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="HyperTension" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="HyperTension" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="HyperTension" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -122,11 +149,11 @@
           <div class="form-group">
             <label for="thyroid">Thyroid disorders</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Thyroid" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Thyroid" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Thyroid" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Thyroid" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -144,11 +171,11 @@
           <div class="form-group">
             <label for="cardiovascular">Cardiovascular diseases</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Cardiovascular" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Cardiovascular" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Cardiovascular" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Cardiovascular" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -167,11 +194,11 @@
           <div class="form-group">
             <label for="respiratory">Respiratory diseases</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Respiratory" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Respiratory" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Respiratory" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Respiratory" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -190,11 +217,11 @@
           <div class="form-group">
             <label for="bleeding">Bleeding disorders</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Bleeding" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="Bleeding" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Bleeding" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="Bleeding" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -214,11 +241,11 @@
           <div class="form-group">
             <label for="visit"><b>Past Dental Visit</b></label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="visit" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="visit" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="visit" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="visit" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -298,51 +325,51 @@
 
           <div class="row">
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-2"><label><b>Tooth number:</b></label></div>
                 <div class="col-"><input type="text"name = "toothnumber"/></div>
-            </div>
+            </div> -->
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Decayed:</b></label></div>
-                <div class="col-"><input type="text" name="decayed" /></div>
+                <div class="col-"><input type="text" name="decayed"  /></div>
             </div>
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Missing:</b></label></div>
-                <div class="col-"><input type="text" name="missing"/></div>
+                <div class="col-"><input type="text" name="missing" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Filled:</b></label></div>
-                <div class="col-"><input type="text" name = "filled"/></div>
+                <div class="col-"><input type="text" name = "filled" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Pain:</b></label></div>
-                <div class="col-"><input type="text" name="pain"/></div>
+                <div class="col-"><input type="text" name="pain" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Fracture:</b></label></div>
-                <div class="col-"><input type="text" name="fractured"/></div>
+                <div class="col-"><input type="text" name="fractured" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
                 <div class="col-2"><label htmlFor=""><b>Mobility:</b></label></div>
-                <div class="col-"><input type="text" name="mobility"/></div>
+                <div class="col-"><input type="text" name="mobility" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
               <div class="col-2"><label htmlFor=""><b>Others:</b></label></div>
-              <div class="col-"><input type="text" name="Others"/></div>
+              <div class="col-"><input type="text" name="Others" /></div>
           </div>
             
 
@@ -367,11 +394,11 @@
           <div class="form-group">
             <label for="calculus">Calculus:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusYes" value="Yes">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusYes" value="Yes" required>
               <label class="form-check-label" for="calculusYes">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusNo" value="No">
+              <input class="form-check-input form-control-input" type="radio" name="Calculus" id="calculusNo" value="No" required>
               <label class="form-check-label" for="calculusNo">No</label>
             </div>
           </div>
@@ -390,11 +417,11 @@
           <div class="form-group">
             <label for="stains">Stains:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="stainsYes" name="Stains" value="Yes">
+              <input class="form-check-input form-control-input" type="radio" id="stainsYes" name="Stains" value="Yes" required>
               <label class="form-check-label" for="stainsYes">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="stainsNo" name="Stains" value="No">
+              <input class="form-check-input form-control-input" type="radio" id="stainsNo" name="Stains" value="No" required>
               <label class="form-check-label" for="stainsNo">No</label>
             </div>
           </div>
@@ -413,11 +440,11 @@
           <div class="form-group">
             <label for="gingivitis">Generalized chronic gingivitis:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Yes">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Yes" required>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="No">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="No" required>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -436,11 +463,11 @@
           <div class="form-group">
             <label for="periodontitis">Generalized chronic periodontitis:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Yes" />
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Yes" required/>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="No" />
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="No" required/>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -459,11 +486,11 @@
           <div class="form-group">
             <label for="dentalFluorosis"><b>Dental Fluorosis</b></label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="floro" value="Yes">
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="floro" value="Yes" required>
               <label class="form-check-label" for="visit1">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="floro" value="No">
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="floro" value="No" required>
               <label class="form-check-label" for="visit2">No</label>
             </div>
           </div>
@@ -483,11 +510,11 @@
           <div class="form-group">
             <label for="malo"><b>Malocclusion</b></label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="malo" id="maloYes" value="Yes">
+              <input class="form-check-input" type="radio" name="malo" id="maloYes" value="Yes" required>
               <label class="form-check-label" for="maloYes">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="malo" id="maloNo" value="No">
+              <input class="form-check-input" type="radio" name="malo" id="maloNo" value="No" required>
               <label class="form-check-label" for="maloNo">No</label>
             </div>
           </div>
@@ -507,11 +534,11 @@
           <div class="form-group">
             <label for="oralMucosalLesion"><b>Oral mucosal lesion</b></label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionYes" value="Yes">
+              <input class="form-check-input form-control-input" type="radio" name="oralMucosalLesion" id="oralMucosalLesionYes" value="Yes" required>
               <label class="form-check-label" for="oralMucosalLesionYes">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionNo" value="No">
+              <input class="form-check-input form-control-input" type="radio" name="oralMucosalLesion" id="oralMucosalLesionNo" value="No" required>
               <label class="form-check-label" for="oralMucosalLesionNo">No</label>
             </div>
           </div>
@@ -522,18 +549,20 @@
           <br>
           <div class="row">
             <div class="col-2"><label><b>Doctor's Name :</b></label></div>
-            <div class="col-"><input type="text"name = "doctors_name"/></div>
+            <div class="col-"><input type="text"name = "doctors_name" required/></div>
         </div>
         <br />
         <br />
-          <label htmlFor=""><b>Treatment done</b></label>
+          <label htmlFor=""><b>Treatment Plan</b></label>
           <br />
-          <select id="history" name="treatment">
+          <select id="history" name="treatment" required>
             <option value="Diabetes">Medication:</option>
             <option value="Hypertention">Referral:</option>
             <option value="Thyroid">Scaling:</option>
             <option value="Cardiovascular">Extraction:</option>
             <option value="Respiratory">Filling:</option>
+            <option value="Nil">Nil:</option>
+            <option value="Others">Others:</option>
           </select>
           <br />
           <br>
