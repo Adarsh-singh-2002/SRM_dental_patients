@@ -19,12 +19,14 @@ def form():
     return render_template('form.html')
     
 
-@app.route('/submit-form', methods=['POST'])
+@app.route('/submit-form', methods=['GET','POST'])
 def submit_form():
     id = str(uuid.uuid4())[0:15]
-
+    organiser = request.form.get('organiser',None)
     date = request.form.get('date',None)
     place = request.form.get('place',None)
+    age = request.form.get('age',None)
+    contact = request.form.get('contact',None)
     name = request.form.get('name',None)
     gender = request.form.get('gender',None)
     cheif_complaint = request.form.get('complaint',None)
@@ -46,7 +48,7 @@ def submit_form():
 
 
 
-    tooth_number = request.form.get('toothnumber',None)
+    
     decayed = request.form.get('decayed',None)
     missing = request.form.get('missing',None)
     filled = request.form.get('filled',None)
@@ -85,15 +87,16 @@ def submit_form():
 
     # create a table if it does not exist
     c.execute('''CREATE TABLE IF NOT EXISTS Patients
-                (Patient_id TEXT, DateOfVisit TEXT, Place TEXT, Name_Of_Patient TEXT, Gender TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT, past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT, `Nothing` TEXT, tooth_number TEXT, decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
+                (Patient_id TEXT,Organised_By TEXT, DateOfVisit TEXT, Place TEXT, Age TEXT,Contact TEXT,Name_Of_Patient TEXT, Gender TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT, past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT, `Nothing` TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
 
     # insert data into the table
-    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,date,place,name,gender,cheif_complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,past_dental_visit,smoking,Alcohol,Nothing,tooth_number,decayed,missing,filled,pain,fractured,mobility,others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,Doctors_name,treatment_done,expalnation))
+    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organiser,date,place,age,contact,name,gender,cheif_complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,past_dental_visit,smoking,Alcohol,Nothing,decayed,missing,filled,pain,fractured,mobility,others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,Doctors_name,treatment_done,expalnation))
 
 
     conn.commit()
     conn.close()
-    return 'Form submitted successfully!'
+    
+    return "Form Submitted successfully"
 
 
 # Define the route to display the data
@@ -130,7 +133,7 @@ def download_data():
     # Create a CSV file from the data
     output = io.StringIO()
     writer = csv.writer(output)
-    writer.writerow(['ID','Date','Place','Name','Gender','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','past_dental_visit','smoking','Alcohol','Nothing','tooth_number','decayed','missing','filled','pain','fractured','mobility','others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','Doctors_name','treatment_done','expalnation'])  # Add column headings
+    writer.writerow(['ID','organiser','Date','Place','age','contact','Name','Gender','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','past_dental_visit','smoking','Alcohol','Nothing','decayed','missing','filled','pain','fractured','mobility','others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','Doctors_name','treatment_done','expalnation'])  # Add column headings
     for row in rows:
         writer.writerow(row)
 
