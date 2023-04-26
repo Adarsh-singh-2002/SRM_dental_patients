@@ -1,4 +1,4 @@
-from flask import Flask ,render_template, request,Response ,send_file
+from flask import Flask ,render_template, request,Response ,send_file,redirect,url_for
 import sqlite3
 import os
 import uuid
@@ -29,7 +29,7 @@ def submit_form():
     contact = request.form.get('contact',None)
     name = request.form.get('name',None)
     gender = request.form.get('gender',None)
-    cheif_complaint = request.form.get('complaint',None)
+    complaint = request.form.get('complaint',None)
     # past_medical_history = request.form.get('history')
 
     Diabetes = request.form.get('Diabetes',None)
@@ -55,7 +55,7 @@ def submit_form():
     pain = request.form.get('pain',None)
     fractured = request.form.get('fractured',None)
     mobility = request.form.get('mobility',None)
-    others = request.form.get('others',None)
+    Others = request.form.get('Others',None)
 
     # gingiva = request.form.get('gingiva')
 
@@ -76,7 +76,7 @@ def submit_form():
     Doctors_name = request.form.get('doctors_name',None)
 
     treatment_done = request.form.get('treatment',None)
-    expalnation = request.form.get('explanation',None)
+    explanation = request.form.get('explanation',None)
 
 
 
@@ -90,7 +90,7 @@ def submit_form():
                 (Patient_id TEXT,Organised_By TEXT, DateOfVisit TEXT, Place TEXT, Age TEXT,Contact TEXT,Name_Of_Patient TEXT, Gender TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT, past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT, `Nothing` TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
 
     # insert data into the table
-    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organiser,date,place,age,contact,name,gender,cheif_complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,past_dental_visit,smoking,Alcohol,Nothing,decayed,missing,filled,pain,fractured,mobility,others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,Doctors_name,treatment_done,expalnation))
+    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organiser,date,place,age,contact,name,gender,complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,past_dental_visit,smoking,Alcohol,Nothing,decayed,missing,filled,pain,fractured,mobility,Others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,Doctors_name,treatment_done,explanation))
 
 
     conn.commit()
@@ -133,7 +133,7 @@ def download_data():
     # Create a CSV file from the data
     output = io.StringIO()
     writer = csv.writer(output)
-    writer.writerow(['ID','organiser','Date','Place','age','contact','Name','Gender','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','past_dental_visit','smoking','Alcohol','Nothing','decayed','missing','filled','pain','fractured','mobility','others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','Doctors_name','treatment_done','expalnation'])  # Add column headings
+    writer.writerow(['ID','organiser','Date','Place','age','contact','Name','Gender','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','past_dental_visit','smoking','Alcohol','Nothing','decayed','missing','filled','pain','fractured','mobility','Others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','Doctors_name','treatment_done','explanation'])  # Add column headings
     for row in rows:
         writer.writerow(row)
 
