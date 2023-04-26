@@ -83,9 +83,10 @@
             </div>
         </div>
           <br></br>
-          <label name = "complaint"><b>Chief Complaint</b></label>
+          <label><b>Chief Complaint</b></label>
           <br />
-          <textarea rows="1" cols="40" name="complaint" form="usrform" required></textarea>
+          <!-- <textarea rows="1" cols="40" name="complaint" form="usrform" required></textarea> -->
+          <div class="col-"><input type="text"name = "complaint" /></div>
           <br />
           <br>
           <label ><b>Past Medical History</b></label>
@@ -370,6 +371,7 @@
             <div class="row">
               <div class="col-2"><label htmlFor=""><b>Others:</b></label></div>
               <div class="col-"><input type="text" name="Others" /></div>
+              
           </div>
             
 
@@ -534,11 +536,11 @@
           <div class="form-group">
             <label for="oralMucosalLesion"><b>Oral mucosal lesion</b></label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="oralMucosalLesion" id="oralMucosalLesionYes" value="Yes" required>
+              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionYes" value="Yes" required>
               <label class="form-check-label" for="oralMucosalLesionYes">Yes</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" name="oralMucosalLesion" id="oralMucosalLesionNo" value="No" required>
+              <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionNo" value="No" required>
               <label class="form-check-label" for="oralMucosalLesionNo">No</label>
             </div>
           </div>
@@ -556,17 +558,18 @@
           <label htmlFor=""><b>Treatment Plan</b></label>
           <br />
           <select id="history" name="treatment" required>
-            <option value="Diabetes">Medication:</option>
-            <option value="Hypertention">Referral:</option>
-            <option value="Thyroid">Scaling:</option>
-            <option value="Cardiovascular">Extraction:</option>
-            <option value="Respiratory">Filling:</option>
-            <option value="Nil">Nil:</option>
-            <option value="Others">Others:</option>
+            <option value="Medication:">Medication:</option>
+            <option value="Referral:">Referral:</option>
+            <option value="Scaling:">Scaling:</option>
+            <option value="Extraction:">Extraction:</option>
+            <option value="Filling:">Filling:</option>
+            <option value="Nil:">Nil:</option>
+            <option value="Others:">Others:</option>
           </select>
           <br />
           <br>
-          <textarea rows="1" cols="50" name="explanation" form="usrform" ></textarea>
+          <!-- <textarea rows="1" cols="50" name="explanation" form="usrform" ></textarea> -->
+          <div class="col-"><input type="text"name = "explanation" /></div>
           <br />
           <br>
           <br>
