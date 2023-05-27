@@ -18,24 +18,44 @@
              
           <div class="row">
             <div class="col-sm-2">
-              <label for="organiser" ><b>Organised By:</b></label>
+              <label for="Organised_By" ><b>Organised By:</b></label>
             </div>
             <div class="col-sm-3">
-              <input type="text" id="organiser" name="organiser" class="form-control" required/>
-            </div>
+              <input type="text" id="Organised_By" name="Organised_By" class="form-control" required/>
+              <label htmlFor="">Department</label>
+          <br />
+          <select id="history" name="department" required>
+            <option value="camp">camp:</option>
+            <option value="dental">dental:</option>
+            <option value="college">college:</option>
+          </select>
+          <br />
+          </div>
+
+            
           </div>
             <br>
             <div class="row">
                 
-                <div class="col-3"><label><b>Date</b></label>
+                <div class="col-3"><label><b>Date : </b></label>
                    
                     <input type="date" name = "date" required/>
                 </div>
 
-                <div class="col"><label htmlFor=""><b>Place</b></label>
+                <div class="col"><label htmlFor=""><b>Place : </b></label>
                     <input type="text" name="place" required />
                 </div>
+
+                <div class="col"><label htmlFor=""><b>District : </b></label>
+                  <input type="text" name="district" required />
               </div>
+              </div>
+              <br>
+              <br>
+              <div class="col"><label htmlFor=""><b>Name : </b></label>
+                <input type="text" name="name" required/>
+            </div>
+              <br>              
               <br>
 
               <div class="row">
@@ -43,24 +63,23 @@
                     <label ><b>ID:</b></label>
                     <input type="text" /></div> -->
                 
-                <div class="col-3"><label><b>Age</b></label>
+                <div class="col-3"><label><b>Age : </b></label>
                    
                     <input type="string" name = "age" required/>
                 </div>
 
-                <div class="col"><label htmlFor=""><b>Contact:</b></label>
+                <div class="col"><label htmlFor=""><b>Contact : </b></label>
                   <input type="text" name="contact" required/>
+                </div>
+
+                <div class="col"><label htmlFor=""><b>Education : </b></label>
+                  <input type="text" name="education" required/>
                 </div>
               </div>
               <br>
           
-          <br />
-          <label htmlFor=""><b>Name</b></label>
-          <br />
-          <input type="text" name="name" required/>
-          <br />
-          <br>
-          <label ><b>Gender</b></label>
+         
+          <label ><b>Gender : </b></label>
           <br />
           <div class="row">
             <div class="col">
@@ -82,14 +101,21 @@
                 </div>
             </div>
         </div>
+
           <br></br>
+
+          <div class="col"><label htmlFor=""><b>Monthly income of family : </b></label>
+            <input type="text" name="income" required/>
+          </div>
+          <br>
+          <br>
           <label><b>Chief Complaint</b></label>
           <br />
           <!-- <textarea rows="1" cols="40" name="complaint" form="usrform" required></textarea> -->
           <div class="col-"><input type="text"name = "complaint" /></div>
           <br />
           <br>
-          <label ><b>Past Medical History</b></label>
+          <label ><b><u>Past Medical History</u></b></label>
           <br />
           <!-- <br>
           <label htmlFor="">Diabetes</label>
@@ -227,6 +253,15 @@
             </div>
           </div>
           <br>
+          <br>
+          <div class="row">
+            <div class="col-2"><label htmlFor="">Others:</label></div>
+            <div class="col-"><input type="text" name="Others_past" /></div>
+            
+        </div>
+        <br>
+        <br>
+          
           
 
 
@@ -287,7 +322,7 @@
           <label for="visit2">No</label>
           <br /> -->
           <div class="form-group">
-            <label for="smoking"><b>Personal Habits</b></label>
+            <label for="smoking"><b><u>Personal Habits</u></b></label>
             <br>
             <br>
             <label for="smoking">Smoking</label>
@@ -310,6 +345,16 @@
               <label class="form-check-label" for="alcohol-no">No</label>
             </div>
             <br>
+            <label for="nothing">Smokeless Tabacco</label>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-yes" name="smokeless" value="Yes" />
+              <label class="form-check-label" for="nothing-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="nothing-no" name="smokeless" value="No" />
+              <label class="form-check-label" for="nothing-no">No</label>
+            </div>
+            <br>
             <label for="nothing">None</label>
             <div class="form-check">
               <input class="form-check-input form-control-input" type="radio" id="nothing-yes" name="Nothing" value="Yes" />
@@ -319,6 +364,13 @@
               <input class="form-check-input form-control-input" type="radio" id="nothing-no" name="Nothing" value="No" />
               <label class="form-check-label" for="nothing-no">No</label>
             </div>
+            <br>
+
+            <div class="row">
+              <div class="col-2"><label htmlFor="">Others:</label></div>
+              <div class="col-"><input type="text" name="Others_habits" /></div>
+              
+          </div>
           </div>
           
           <br>
@@ -331,45 +383,47 @@
                 <div class="col-"><input type="text"name = "toothnumber"/></div>
             </div> -->
             <br>
-            <br/>
+            <br>
+            <label for="smoking"><b><u>Clinical Examination</u></b></label>
+            <br>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Decayed:</b></label></div>
+                <div class="col-2"><label htmlFor="">Decayed:</label></div>
                 <div class="col-"><input type="text" name="decayed"  /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Missing:</b></label></div>
+                <div class="col-2"><label htmlFor="">Missing:</label></div>
                 <div class="col-"><input type="text" name="missing" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Filled:</b></label></div>
+                <div class="col-2"><label htmlFor="">Filled:</label></div>
                 <div class="col-"><input type="text" name = "filled" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Pain:</b></label></div>
+                <div class="col-2"><label htmlFor="">Pain:</label></div>
                 <div class="col-"><input type="text" name="pain" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Fracture:</b></label></div>
+                <div class="col-2"><label htmlFor="">Fractured teeth:</label></div>
                 <div class="col-"><input type="text" name="fractured" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-                <div class="col-2"><label htmlFor=""><b>Mobility:</b></label></div>
+                <div class="col-2"><label htmlFor="">Mobility:</label></div>
                 <div class="col-"><input type="text" name="mobility" /></div>
             </div>
             <br>
             <br/>
             <div class="row">
-              <div class="col-2"><label htmlFor=""><b>Others:</b></label></div>
+              <div class="col-2"><label htmlFor="">Others:</label></div>
               <div class="col-"><input type="text" name="Others" /></div>
               
           </div>
@@ -380,7 +434,7 @@
           <br />
           <br />
           <div class="row">
-            <div class="col-2"><label htmlFor=""><b>Gingiva</b></label></div>
+            <div class="col-2"><label htmlFor=""><b><u>Gingiva</u></b></label></div>
           </div>
           <br>
 
@@ -442,12 +496,12 @@
           <div class="form-group">
             <label for="gingivitis">Generalized chronic gingivitis:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Yes" required>
-              <label class="form-check-label" for="visit1">Yes</label>
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="gingivitis" value="Localized" required>
+              <label class="form-check-label" for="visit1">Localized</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="No" required>
-              <label class="form-check-label" for="visit2">No</label>
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="Generalised" required>
+              <label class="form-check-label" for="visit2">Generalised</label>
             </div>
           </div>
           <br>
@@ -465,12 +519,12 @@
           <div class="form-group">
             <label for="periodontitis">Generalized chronic periodontitis:</label>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Yes" required/>
-              <label class="form-check-label" for="visit1">Yes</label>
+              <input class="form-check-input form-control-input" type="radio" id="visit1" name="periodontitis" value="Localized" required/>
+              <label class="form-check-label" for="visit1">Localized</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="No" required/>
-              <label class="form-check-label" for="visit2">No</label>
+              <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="Generalised" required/>
+              <label class="form-check-label" for="visit2">Generalised</label>
             </div>
           </div>
           <br>
@@ -535,15 +589,37 @@
           <br /> -->
           <div class="form-group">
             <label for="oralMucosalLesion"><b>Oral mucosal lesion</b></label>
-            <div class="form-check">
+            <div class="row">
+              <div class="col-"><input type="text" name="masc" /></div>
+            </div>
+
+            <!-- <div class="form-check">
               <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionYes" value="Yes" required>
               <label class="form-check-label" for="oralMucosalLesionYes">Yes</label>
             </div>
             <div class="form-check">
               <input class="form-check-input form-control-input" type="radio" name="masc" id="oralMucosalLesionNo" value="No" required>
               <label class="form-check-label" for="oralMucosalLesionNo">No</label>
-            </div>
+            </div> -->
           </div>
+          <br>
+
+          <br>
+          <label htmlFor=""><b>Method of cleaning teeth </b></label>
+          <br />
+          <select id="history" name="cleaning" required>
+            <option value="toothbrush and paste">toothbrush and paste:</option>
+            <option value="Finger">Finger:</option>
+            <option value="tooth powder">tooth powder</option>
+            <option value="natural stick">natural stick</option>
+            <option value="Others:">Others:</option>
+          </select>
+          <div class="row">
+            <div class="col-2"><label htmlFor="">Others:</label></div>
+            <div class="col-"><input type="text" name="Others_method" /></div>
+            
+        </div>
+          <br />
           <br>
           
 
@@ -553,8 +629,8 @@
             <div class="col-2"><label><b>Doctor's Name :</b></label></div>
             <div class="col-"><input type="text"name = "doctors_name" required/></div>
         </div>
-        <br />
-        <br />
+        <br>
+        <br>
           <label htmlFor=""><b>Treatment Plan</b></label>
           <br />
           <select id="history" name="treatment" required>
