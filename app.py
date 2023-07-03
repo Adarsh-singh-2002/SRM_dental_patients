@@ -47,11 +47,9 @@ def submit_form():
 
     past_dental_visit = request.form.get('visit',None)
 
-    # personal_habits = request.form.get('habits')
     smoking = request.form.get('Smoking',None)
     Alcohol = request.form.get('Alcohol',None)
     smokeless = request.form.get('smokeless',None)
-    Nothing = request.form.get('Nothing',None)
     Others_habits = request.form.get('Others_habits',None)
 
 
@@ -99,10 +97,10 @@ def submit_form():
 
     # create a table if it does not exist
     c.execute('''CREATE TABLE IF NOT EXISTS Patients
-                (Patient_id TEXT,Organised_By TEXT,Department TEXT, DateOfVisit TEXT, Place TEXT,District TEXT,Name_Of_Patient TEXT, Age TEXT,Contact TEXT,Education TEXT, Gender TEXT,Income TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT,Others_past TEXT,past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT,smokeless TEXT, `Nothing` TEXT,Others_habits TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT,cleaning TEXT,Others_method TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
+                (Patient_id TEXT,Organised_By TEXT,Department TEXT, DateOfVisit TEXT, Place TEXT,District TEXT,Name_Of_Patient TEXT, Age TEXT,Contact TEXT,Education TEXT, Gender TEXT,Income TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT,Others_past TEXT,past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT,smokeless TEXT,Others_habits TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT,cleaning TEXT,Others_method TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
 
     # insert data into the table
-    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organisedBy,department,date,place,district,name,age,contact,education,gender,income,complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,Others_past,past_dental_visit,smoking,Alcohol,smokeless,Nothing,Others_habits,decayed,missing,filled,pain,fractured,mobility,Others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,cleaning,Others_method,Doctors_name,treatment_done,explanation))
+    c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organisedBy,department,date,place,district,name,age,contact,education,gender,income,complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,Others_past,past_dental_visit,smoking,Alcohol,smokeless,Others_habits,decayed,missing,filled,pain,fractured,mobility,Others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,cleaning,Others_method,Doctors_name,treatment_done,explanation))
 
 
     conn.commit()
@@ -145,7 +143,7 @@ def download_data():
     # Create a CSV file from the data
     output = io.StringIO()
     writer = csv.writer(output)
-    writer.writerow(['ID','organiser','Department','Date','Place','District','Name','age','contact','Education','Gender','Income','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','Others_past','past_dental_visit','smoking','Alcohol','smokeless','Nothing','Others_habits','decayed','missing','filled','pain','fractured','mobility','Others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','cleaning','Others_method' ,'Doctors_name','treatment_done','explanation'])  # Add column headings
+    writer.writerow(['ID','organiser','Department','Date','Place','District','Name','age','contact','Education','Gender','Income','cheif_complaint','Diabetes','HyperTension','Thyroid_disorders','Cardiovascular_diseases','Resiratory_diseases','Bleeding_disorders','Others_past','past_dental_visit','smoking','smokeless','Alcohol','Others_habits','decayed','missing','filled','pain','fractured','mobility','Others','Calculus','Stains','gingivitis','periodontitis','dental_fluorosis','malocclusion','oral_muscosal_lesion','cleaning','Others_method' ,'Doctors_name','treatment_done','explanation'])  # Add column headings
     for row in rows:
         writer.writerow(row)
 
@@ -222,6 +220,6 @@ def drop_table():
     return message
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
     
 
