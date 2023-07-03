@@ -106,7 +106,7 @@ def submit_form():
     conn.commit()
     conn.close()
     
-    return "Form Submitted successfully"
+    return redirect('/form.html')
 
 
 # Define the route to display the data
