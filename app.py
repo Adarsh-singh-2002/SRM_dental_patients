@@ -217,6 +217,7 @@ def drop_table():
     return message
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+    # app.run(debug=True)
     
 
