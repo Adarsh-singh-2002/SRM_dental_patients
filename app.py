@@ -9,6 +9,18 @@ currentdirectory = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__, template_folder='templates')
 
+conn = sqlite3.connect('patient.db') # create a database if it does not exist
+c = conn.cursor()
+
+# create a table if it does not exist
+c.execute('''CREATE TABLE IF NOT EXISTS Patients
+            (Patient_id TEXT,Organised_By TEXT,Department TEXT, DateOfVisit TEXT, Place TEXT,District TEXT,Name_Of_Patient TEXT, Age TEXT,Contact TEXT,Education TEXT, Gender TEXT,Income TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT,Others_past TEXT,past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT,smokeless TEXT,Others_habits TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT,cleaning TEXT,Others_method TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
+
+
+
+
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -34,7 +46,6 @@ def submit_form():
     gender = request.form.get('gender',None)
     income = request.form.get('income',None)
     complaint = request.form.get('complaint',None)
-    # past_medical_history = request.form.get('history')
 
     Diabetes = request.form.get('Diabetes',None)
     HyperTension = request.form.get('HyperTension',None)
@@ -62,9 +73,6 @@ def submit_form():
     mobility = request.form.get('mobility',None)
     Others = request.form.get('Others',None)
 
-    
-
-    # gingiva = request.form.get('gingiva')
 
     Calculus = request.form.get('Calculus',None)
     Stains = request.form.get('Stains',None)
@@ -72,13 +80,9 @@ def submit_form():
     periodontitis = request.form.get('periodontitis',None)
 
 
-
-
-    # description = request.form.get('comment')
     dental_fluorosis = request.form.get('floro',None)
     malocclusion = request.form.get('malo',None)
     oral_muscosal_lesion = request.form.get('masc',None)
-    # condition = request.form.get('condition')
 
     cleaning = request.form.get('cleaning',None)
     Others_method = request.form.get('Others_method',None)
@@ -88,17 +92,10 @@ def submit_form():
     treatment_done = request.form.get('treatment',None)
     explanation = request.form.get('explanation',None)
 
-
-
     conn = sqlite3.connect('patient.db') # create a database if it does not exist
+
     c = conn.cursor()
-
-    # c.execute("DROP TABLE Patients")
-
-    # create a table if it does not exist
-    c.execute('''CREATE TABLE IF NOT EXISTS Patients
-                (Patient_id TEXT,Organised_By TEXT,Department TEXT, DateOfVisit TEXT, Place TEXT,District TEXT,Name_Of_Patient TEXT, Age TEXT,Contact TEXT,Education TEXT, Gender TEXT,Income TEXT, Cheif_Complaint TEXT, Diabetes TEXT, HyperTension TEXT, Thyroid_Disorders TEXT, Cardiovascular_Diseases TEXT, Respiratory_diseases TEXT, Bleeding_Disorders TEXT,Others_past TEXT,past_dental_visit TEXT, Smoking TEXT, Alcohol TEXT,smokeless TEXT,Others_habits TEXT,  decayed_tooth TEXT, missing_tooth TEXT, filled_tooth TEXT, pain_in_tooth TEXT, fractured_tooth TEXT, mobility_tooth TEXT, others TEXT, Calculus TEXT, Stains TEXT, Gingivitis TEXT, Periodontitis TEXT, dental_fluorosis TEXT, malocclusion TEXT, oral_muscosal_lesion TEXT,cleaning TEXT,Others_method TEXT, Doctors_name TEXT, treatment_done TEXT, expalnation TEXT)''')
-
+    
     # insert data into the table
     c.execute("INSERT INTO Patients VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(id,organisedBy,department,date,place,district,name,age,contact,education,gender,income,complaint,Diabetes,HyperTension,Thyroid,Cardiovascular,Respiratory,Bleeding,Others_past,past_dental_visit,smoking,Alcohol,smokeless,Others_habits,decayed,missing,filled,pain,fractured,mobility,Others,Calculus,Stains,gingivitis,periodontitis,dental_fluorosis,malocclusion,oral_muscosal_lesion,cleaning,Others_method,Doctors_name,treatment_done,explanation))
 

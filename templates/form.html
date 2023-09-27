@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Patient Details</title>
     <link rel="stylesheet" href="/static/css/style1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -22,31 +22,17 @@
             </div>
             <br>
             <div class="col-sm-3">
-              <select id="history" name="department" required onchange="toggleOrganisedByInput()">
-                <option value="">select an option:</option>
+              <select id="Organised_By" name="Organised_By" required onchange="toggleOrganisedByInput()">
+                <option value="None">select an option:</option>
                 <option value="Public Health Dentistry">Public Health Dentistry:</option>
                 <option value="Others">Others:</option>
                 </select>
               <br>
               <label htmlFor="">Department</label>
-              <input type="text" id="Organised_By" name="Organised_By" class="form-control" style="display: none;"/>
+              <input type="text" id="department" name="department" class="form-control" style="display: none;"/>
               
               <br/>
             </div>
-          <!-- <label for="firstField">First Field:</label>
-    <select id="firstField" onchange="toggleField()">
-    <option value="">Select an option</option>
-    <option value="specificValue">Specific Value</option>
-    <option value="otherValue">Other Value</option>
-  </select>
-
-  <br><br>
-
-  <div id="secondField" style="display: none;">
-    <label for="secondField">Second Field:</label>
-    <input type="text" id="secondField" name="secondField">
-  </div> -->
-
             
           </div>
             <br>
@@ -368,6 +354,10 @@
               <input class="form-check-input form-control-input" type="radio" id="visit2" name="gingivitis" value="Generalised" required>
               <label class="form-check-label" for="visit2">Generalised</label>
             </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit3" name="gingivitis" value="Neither_Localized_nor_Generalised" required>
+              <label class="form-check-label" for="visit2">None</label>
+            </div>
           </div>
           <br>
           
@@ -380,6 +370,10 @@
             <div class="form-check">
               <input class="form-check-input form-control-input" type="radio" id="visit2" name="periodontitis" value="Generalised" required/>
               <label class="form-check-label" for="visit2">Generalised</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input form-control-input" type="radio" id="visit3" name="periodontitis" value="Neither_Localized_nor_Generalised" required/>
+              <label class="form-check-label" for="visit2">None</label>
             </div>
           </div>
           <br>
@@ -424,7 +418,7 @@
           <label htmlFor=""><b>Method of cleaning teeth </b></label>
           <br />
           <select id="history" name="cleaning" required>
-            <option value="">select an option:</option>
+            <option value="notSelected">select an option:</option>
             <option value="toothbrush and paste">toothbrush and paste:</option>
             <option value="Finger">Finger:</option>
             <option value="tooth powder">tooth powder</option>
@@ -467,14 +461,20 @@
           <br>
           <br>
           <button type="submit" style="width: 100%; color: rgb(249, 252, 251); background-color:  rgb(18, 103, 103);"> Submit </button>
+          <br>
+          <br>
+          <br>
+
+          <button class = "col-1" type="button" style="width: 100%; color: rgb(7, 152, 104); background-color:  rgb(7, 152, 104); " onclick="window.location.href='/';">Go to Home Page</button>
+
         </div>
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
     function toggleOrganisedByInput() {
-      var select = document.getElementById("history");
-      var organisedByInput = document.getElementById("Organised_By");
+      var select = document.getElementById("Organised_By");
+      var organisedByInput = document.getElementById("department");
   
       if (select.value === "Others") {
         organisedByInput.style.display = "block";
